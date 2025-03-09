@@ -8,5 +8,5 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Salary Bias Analysis", layout="wide")
 
-st.title("Main Dashboard")
+st.title("Exploring Sex Bias in University Salaries and ")
 st.write("Welcome! Use the sidebar to navigate different analysis sections.")
