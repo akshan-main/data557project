@@ -22,30 +22,17 @@ st.set_page_config(page_title="About the Data", layout="wide")
 st.title("About the Data")
 st.write("This interactive page allows you to explore the faculty salary dataset.")
 
-
-# Fixed Filters Section
-with st.container():
-    col1, col2, col3 = st.columns([2, 2, 2])
-    with col1:
-        variable = st.selectbox("Select Variable", available_variables, index=available_variables.index("salary"))
-    with col2:
-        sex_filter = st.multiselect("Select Sex", df["sex"].unique(), default=df["sex"].unique())
-    with col3:
-        rank_filter = st.multiselect("Select Rank", df["rank"].dropna().unique(), default=df["rank"].dropna().unique())
-    
-    col4, col5, col6 = st.columns([2, 2, 2])
-    with col4:
-        degree_filter = st.multiselect("Select Degree", df["deg"].unique(), default=df["deg"].unique())
-    with col5:
-        field_filter = st.multiselect("Select Field", df["field"].unique(), default=df["field"].unique())
-    with col6:
-        admin_filter = st.multiselect("Admin Role", df["admin"].unique(), default=df["admin"].unique())
-    
-    col7, col8 = st.columns([2, 2])
-    with col7:
-        year_choice = st.selectbox("Select Year", sorted(df["year"].unique()), index=list(sorted(df["year"].unique())).index(95))
-    with col8:
-        yrdeg_range = st.slider("Select Year Degree Attained Range", int(df["yrdeg"].min()), int(df["yrdeg"].max()), (int(df["yrdeg"].min()), int(df["yrdeg"].max())))
+# Sidebar Filters
+with st.sidebar:
+    st.header("Filter Data")
+    variable = st.selectbox("Select Variable", available_variables, index=available_variables.index("salary"))
+    sex_filter = st.multiselect("Select Sex", df["sex"].unique(), default=df["sex"].unique())
+    rank_filter = st.multiselect("Select Rank", df["rank"].dropna().unique(), default=df["rank"].dropna().unique())
+    degree_filter = st.multiselect("Select Degree", df["deg"].unique(), default=df["deg"].unique())
+    field_filter = st.multiselect("Select Field", df["field"].unique(), default=df["field"].unique())
+    admin_filter = st.multiselect("Admin Role", df["admin"].unique(), default=df["admin"].unique())
+    year_choice = st.selectbox("Select Year", sorted(df["year"].unique()), index=list(sorted(df["year"].unique())).index(95))
+    yrdeg_range = st.slider("Select Year Degree Attained Range", int(df["yrdeg"].min()), int(df["yrdeg"].max()), (int(df["yrdeg"].min()), int(df["yrdeg"].max())))
 
 # Variable Descriptions
 st.subheader("Variable Names and Descriptions")
