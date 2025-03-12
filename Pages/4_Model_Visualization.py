@@ -2,11 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
+from sklearn.ensemble import RandomForestRegressor
 
 st.title("Academic Salary Prediction")
 st.markdown("""
@@ -25,26 +28,30 @@ def load_and_train_model():
     df['experience'] = np.maximum(df['year_full'] - df['startyr_full'], 0)
 
     categorical_features = ['sex', 'deg', 'field', 'rank']
-    numeric_features = ['yrdeg_full', 'year_full', 'experience', 'admin']
+    numeric_features = [ 'year_full', 'experience', 'admin']
     preprocessor = ColumnTransformer([
         ('cat', OneHotEncoder(drop='first', sparse_output=False, handle_unknown='ignore'), categorical_features),
-        ('num', 'passthrough', numeric_features)
+        ('num', StandardScaler(), numeric_features)
     ])
 
     model_pipeline = Pipeline([
         ('preprocessor', preprocessor),
-        ('regressor', LinearRegression())
+        ('regressor', Lasso())
     ])
 
     # Train Model
     X = df[categorical_features + numeric_features]
     y = df['salary']
-    model_pipeline.fit(X, y)
+    X_train, X_test,  y_train, y_test = train_test_split(X,y, train_size=0.8)
+    model_pipeline.fit(X_train, y_train)
+    y_pred = model_pipeline.predict(X_test)
 
-    return model_pipeline, df, X, y
+    r2 = r2_score(y_test, y_pred)
+
+    return model_pipeline, df, X, y, r2
 
 # Loading Model and Dataset
-model, df, X, y = load_and_train_model()
+model, df, X, y, r2 = load_and_train_model()
 
 # Input Form
 with st.sidebar.form("salary_prediction_form"):
@@ -141,3 +148,12 @@ coef_df["P-Value"] = coef_df["P-Value"].apply(lambda x: "0.00" if x == 0 else (f
 
 st.markdown("### Regression Coefficients & Statistical Values")
 st.dataframe(coef_df)
+
+# st.dataframe(df)
+
+# st.dataframe(df[['yrdeg_full', 'year_full', 'experience', 'admin']].corr())
+
+st.write(r2)
+
+
+
