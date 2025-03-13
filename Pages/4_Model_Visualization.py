@@ -8,6 +8,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 import statsmodels.api as sm
 
+
+
 st.title("Academic Salary Prediction")
 st.markdown("""
 This page predicts **academic salaries** over time using a regression model trained on historical data.  
