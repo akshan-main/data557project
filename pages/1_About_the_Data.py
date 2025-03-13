@@ -35,20 +35,22 @@ with st.sidebar:
     yrdeg_range = st.slider("Select Year Degree Attained Range", int(df["yrdeg"].min()), int(df["yrdeg"].max()), (int(df["yrdeg"].min()), int(df["yrdeg"].max())))
 
 # Variable Descriptions
-st.subheader("Variable Names and Descriptions")
-st.markdown("""
-- **case** = Case number
-- **id** = Identification number for the faculty member
-- **sex** = M (male) or F (female)
-- **deg** = Highest degree attained: PhD, Prof (professional degree, e.g., medicine or law), or Other (Master's or Bachelor's degree)
-- **yrdeg** = Year highest degree attained
-- **field** = Arts (Arts and Humanities), Prof (professional school, e.g., Business, Law, Engineering, or Public Affairs), or Other
-- **startyr** = Year in which the faculty member was hired (2 digits)
-- **year** = Year (2 digits)
-- **rank** = Rank of the faculty member in this year: Assist (Assistant), Assoc (Associate), or Full (Full)
-- **admin** = Indicator of whether the faculty member had administrative duties (e.g., department chair) in this year: 1 (yes), or 0 (no)
-- **salary** = Monthly salary of the faculty member in this year in dollars
-""")
+with st.expander("🔍 Show Variable Descriptions"):
+    st.subheader("Variable Names and Descriptions")
+    st.markdown("""
+    - **case** = Case number  
+    - **id** = Identification number for the faculty member  
+    - **sex** = M (male) or F (female)  
+    - **deg** = Highest degree attained: PhD, Prof (professional degree, e.g., medicine or law), or Other (Master's or Bachelor's degree)  
+    - **yrdeg** = Year highest degree attained  
+    - **field** = Arts (Arts and Humanities), Prof (professional school, e.g., Business, Law, Engineering, or Public Affairs), or Other  
+    - **startyr** = Year in which the faculty member was hired (2 digits)  
+    - **year** = Year (2 digits)  
+    - **rank** = Rank of the faculty member in this year: Assist (Assistant), Assoc (Associate), or Full (Full)  
+    - **admin** = Indicator of whether the faculty member had administrative duties (e.g., department chair) in this year: 1 (yes), or 0 (no)  
+    - **salary** = Monthly salary of the faculty member in this year in dollars  
+    """)
+
 
 # Apply Filters
 df_filtered = df[(df["sex"].isin(sex_filter)) & 

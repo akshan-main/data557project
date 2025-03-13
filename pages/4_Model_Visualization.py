@@ -14,7 +14,7 @@ import time
 st.title("Academic Salary Prediction")
 st.markdown("""
 This page predicts **academic salaries** over time using a regression model trained on historical data.  
-Use side of the page to adjust inputs. 
+Use side of the page to adjust inputs & witness salary differences in Males & Females. 
 """)
 
 @st.cache_resource
@@ -136,7 +136,7 @@ coef_df = coef_df.sort_values(by="Coefficient", key=abs, ascending=False)
 
 chart = alt.Chart(coef_df).mark_bar(cornerRadius=5).encode(
     x=alt.X("Coefficient:Q", title="Coefficient Value"),
-    y=alt.Y("β Coefficients:N", sort="-x", title="β Coefficients"),
+    y=alt.Y("Feature:N", sort="-x", title="Feature"),
     color=alt.condition(
         alt.datum.Coefficient > 0,
         alt.value("steelblue"),
