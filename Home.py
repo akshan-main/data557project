@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from hypothesis_tests import *
 import seaborn as sns
 import matplotlib.pyplot as plt
-import streamlit as st
 
 st.set_page_config(page_title="Salary Bias Analysis", layout="wide")
 
