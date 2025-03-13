@@ -19,7 +19,7 @@ Use side of the page to adjust inputs.
 
 @st.cache_resource
 def load_and_train_model():
-    df = pd.read_csv('salary.txt', delim_whitespace=True)
+    df = pd.read_csv('../salary.txt', delim_whitespace=True)
     df = df.dropna(subset=['rank'])
 
     df['year_full'] = df['year'] + 1900
@@ -162,4 +162,3 @@ for i in range(int(r2 * 100) + 1):
     progress_bar.progress(i / 100.0)
 
 st.write(f"**R² Score:** {r2:.3f}")
-st.write(f"**Adjusted R² Score:** {sm_model.rsquared_adj:.3f}")
