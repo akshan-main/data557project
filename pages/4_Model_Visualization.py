@@ -129,12 +129,9 @@ coef_df = pd.DataFrame({
 
 coef_df["P-Value"] = coef_df["P-Value"].apply(lambda x: "0.00" if x == 0 else (f"{x:.2e}" if x < 0.0001 else round(x, 4)))
 
-st.markdown("### Regression Coefficients & Statistical Values")
-st.dataframe(coef_df)
+coef_df2 = coef_df.sort_values(by="Coefficient", key=abs, ascending=False)
 
-coef_df = coef_df.sort_values(by="Coefficient", key=abs, ascending=False)
-
-chart = alt.Chart(coef_df).mark_bar(cornerRadius=5).encode(
+chart = alt.Chart(coef_df2).mark_bar(cornerRadius=5).encode(
     x=alt.X("Coefficient:Q", title="Coefficient Value"),
     y=alt.Y("Feature:N", sort="-x", title="Feature"),
     color=alt.condition(
@@ -150,6 +147,9 @@ chart = alt.Chart(coef_df).mark_bar(cornerRadius=5).encode(
 
 st.markdown("### Feature Importance: Regression Coefficients")
 st.altair_chart(chart, use_container_width=False)
+
+st.markdown("### Regression Coefficients & Statistical Values")
+st.dataframe(coef_df)
 
 
 # R² value

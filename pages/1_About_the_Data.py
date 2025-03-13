@@ -74,12 +74,13 @@ field_counts = df_filtered_unique["field"].value_counts(normalize=True).mul(100)
 admin_counts = df_filtered_unique["admin"].value_counts().to_dict()
 
 # Display Data Overview
-st.subheader("Data Overview")
-st.write(f"Per chosen variables in **{year_choice}** year, the data contains **{num_unique_ids}** unique faculty members, with **{num_female}** females and **{num_male}** males.")
-st.write(f"- **Rank Distribution:** {', '.join([f'{k}: {v}' for k, v in rank_counts.items()])}")
-st.write(f"- **Degree Distribution:** {', '.join([f'{k}: {v}' for k, v in degree_counts.items()])}")
-st.write(f"- **Field Distribution (%):** {', '.join([f'{k}: {v}%' for k, v in field_counts.items()])}")
-st.write(f"- **Admin Role:** {', '.join([f'{k}: {v}' for k, v in admin_counts.items()])}")
+with st.expander("🔍 Show Data Overview"):
+    st.subheader("Data Overview")
+    st.write(f"Per chosen variables in **{year_choice}** year, the data contains **{num_unique_ids}** unique faculty members, with **{num_female}** females and **{num_male}** males.")
+    st.write(f"- **Rank Distribution:** {', '.join([f'{k}: {v}' for k, v in rank_counts.items()])}")
+    st.write(f"- **Degree Distribution:** {', '.join([f'{k}: {v}' for k, v in degree_counts.items()])}")
+    st.write(f"- **Field Distribution (%):** {', '.join([f'{k}: {v}%' for k, v in field_counts.items()])}")
+    st.write(f"- **Admin Role:** {', '.join([f'{k}: {v}' for k, v in admin_counts.items()])}")
 
 # Rank Analysis
 if variable == "rank":
