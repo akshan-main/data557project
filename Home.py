@@ -41,3 +41,21 @@ for i, member in enumerate(team_members):
         st.markdown(f"[LinkedIn]({member['linkedin']})")
 
 
+import streamlit as st
+import os
+
+st.sidebar.title("Debug Mode")
+
+# Show current working directory
+st.sidebar.write("Current directory:", os.getcwd())
+
+# List all files in the current directory
+st.sidebar.write("Files in directory:", os.listdir(os.getcwd()))
+
+# Check if `pages/` exists
+pages_path = os.path.join(os.getcwd(), "pages")
+if os.path.exists(pages_path):
+    st.sidebar.write("✅ `pages/` folder found!")
+    st.sidebar.write("Files in `pages/`:", os.listdir(pages_path))
+else:
+    st.sidebar.write("❌ `pages/` folder NOT found! Please check deployment.")
