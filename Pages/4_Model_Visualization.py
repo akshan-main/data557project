@@ -9,7 +9,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import statsmodels.api as sm
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
-from sklearn.ensemble import RandomForestRegressor
+import time
 
 st.title("Academic Salary Prediction")
 st.markdown("""
@@ -42,7 +42,7 @@ def load_and_train_model():
     # Train Model
     X = df[categorical_features + numeric_features]
     y = df['salary']
-    X_train, X_test,  y_train, y_test = train_test_split(X,y, train_size=0.8)
+    X_train, X_test,  y_train, y_test = train_test_split(X,y, train_size=0.8, random_state=777)
     model_pipeline.fit(X_train, y_train)
     y_pred = model_pipeline.predict(X_test)
 
@@ -78,7 +78,7 @@ if submit_button:
 
     for yr in years_range:
         exp = yr - start_year
-        
+
         if current_years_in_rank >= 6:
             if current_rank == "Assist":
                 current_rank = "Assoc"
@@ -87,7 +87,7 @@ if submit_button:
                 current_rank = "Full"
                 current_years_in_rank = 0
 
-        current_years_in_rank += 1
+        current_years_in_rank += 1  
 
         pred_input_rows.append({
             "sex": "F", "deg": degree, "field": field, "rank": current_rank,
@@ -102,24 +102,7 @@ if submit_button:
     pred_salaries = model.predict(pred_input_df)
     pred_salaries = np.clip(pred_salaries, a_min=1200, a_max=90000)
     pred_input_df['Predicted Salary'] = pred_salaries
-    plot_df = pred_input_df.copy()
-    plot_df['Sex'] = plot_df['sex'].map({"F": "Female", "M": "Male"})
-    plot_df = plot_df[['year_full', 'Sex', 'Predicted Salary']].rename(columns={'year_full': 'Year'})
-    plot_df['Year'] = plot_df['Year'].astype(str)  # Convert to string for display
 
-    color_scale = alt.Scale(
-        domain=["Female", "Male"],
-        range=["pink", "blue"]
-    )
-
-    chart = alt.Chart(plot_df).mark_line().encode(
-        x=alt.X('Year:O', title='Year'),
-        y=alt.Y('Predicted Salary:Q', title='Predicted Salary', scale=alt.Scale(domain=[0, 20000])),
-        color=alt.Color('Sex:N', title='Sex', scale=color_scale),
-        tooltip=['Year', 'Sex', 'Predicted Salary']
-    ).properties(title='Predicted Salary Trend by Sex').interactive()
-
-    st.altair_chart(chart, use_container_width=True)
 
     # Salary
     female_salary = pred_input_df[(pred_input_df['year_full'] == prediction_year) & (pred_input_df['sex'] == 'F')]['Predicted Salary']
@@ -149,11 +132,33 @@ coef_df["P-Value"] = coef_df["P-Value"].apply(lambda x: "0.00" if x == 0 else (f
 st.markdown("### Regression Coefficients & Statistical Values")
 st.dataframe(coef_df)
 
-# st.dataframe(df)
+coef_df = coef_df.sort_values(by="Coefficient", key=abs, ascending=False)
 
-# st.dataframe(df[['yrdeg_full', 'year_full', 'experience', 'admin']].corr())
+chart = alt.Chart(coef_df).mark_bar(cornerRadius=5).encode(
+    x=alt.X("Coefficient:Q", title="Coefficient Value"),
+    y=alt.Y("β Coefficients:N", sort="-x", title="β Coefficients"),
+    color=alt.condition(
+        alt.datum.Coefficient > 0,
+        alt.value("steelblue"),
+        alt.value("salmon")
+    ),
+    tooltip=["Feature", "Coefficient"]
+).properties(
+    title="Regression Coefficients (Sorted by Importance)",
+    width=500, height=400
+)
 
-st.write(r2)
+st.markdown("### Feature Importance: Regression Coefficients")
+st.altair_chart(chart, use_container_width=False)
 
 
+# R² value
+st.markdown("### Model Performance (R² Score)")
 
+progress_bar = st.progress(0)
+
+for i in range(int(r2 * 100) + 1):
+    time.sleep(0.01)
+    progress_bar.progress(i / 100.0)
+
+st.write(f"**R² Score:** {r2:.3f}")
