@@ -1,5 +1,5 @@
 import pandas as pd
-from scipy.stats import ttest_ind
+from scipy.stats import ttest_ind, t
 import statsmodels.api as sm
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,6 +16,12 @@ def tTestYear(df, year=95, starting=False):
     n_m, n_f = len(male_salaries), len(female_salaries)
     var_m, var_f = np.var(male_salaries, ddof=1), np.var(female_salaries, ddof=1)
     std_error = np.sqrt((var_m / n_m) + (var_f / n_f))
+
+    df_denom = ((var_m / n_m) + (var_f / n_f)) ** 2
+    df_numerator = ((var_m / n_m) ** 2) / (n_m - 1) + ((var_f / n_f) ** 2) / (n_f - 1)
+    df_welch = df_denom / df_numerator
+
+    p_value = 2 * t.sf(abs(t_stat), df_welch)  # Two-tailed test
     
     return t_stat, p_value, std_error
 

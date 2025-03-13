@@ -11,10 +11,9 @@ st.header("Exploring Bias in Granting Salary Increases")
 col1, col2 = st.columns(2)
 
 with col1:
-    y1 = st.text_input("Enter Start Year (≥ 80):", value="80")
-
+    y1 = st.sidebar.text_input("Enter Start Year (≥ 80):", value="80")
 with col2:
-    y2 = st.text_input("Enter End Year (≤ 95):", value="95")
+    y2 = st.sidebar.text_input("Enter End Year (≤ 95):", value="95")
 
 # Validate inputs
 try:
