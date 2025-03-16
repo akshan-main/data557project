@@ -6,60 +6,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed eui
 ---
 I'll finish this part a bit later, it's just a rough plan
 
-# **Behind the Scenes: Designing an Interactive Data Application**
-
-## **1. Choosing the Right Tech Stack**
-- **Why Streamlit?**  
-  - Quick prototyping and interactive visualization.
-  - Easy Python integration without frontend-heavy development.
-- **Why Matplotlib and Seaborn?**  
-  - Matplotlib for flexibility.
-  - Seaborn for statistical plots and aesthetics.
-- **Data Handling with Pandas**  
-  - Efficient filtering and aggregation.
-
----
-
-## **2. UX and Design Considerations**
-- **Moving Filters to the Sidebar**
-  - Keeps the main interface clean while maintaining interactivity.
-- **Ensuring Data Overview is Fixed**
-  - Providing summary statistics upfront so users can quickly grasp dataset characteristics.
-- **Interactivity Without Clutter**
-  - Allowing users to **dynamically change variables** without overwhelming them.
-
----
-
-## **3. Selecting the Right Charts**
-### **A. Salary Analysis**
-- **Boxplot by Sex** → Shows salary distribution and outliers.
-- **Summary Statistics Table** → Provides a numerical overview.
-- **Histogram with KDE** → Helps compare salary distributions.
-
-### **B. Rank, Degree, and Field Analysis**
-- **Stacked Bar Charts** → Show proportions of ranks/fields by sex.
-- **Tables with Counts and Percentages** → Provide context to the visual data.
-
-### **C. Hiring Trends**
-- **Boxplots for Start Year & Degree Year** → Show differences by sex.
-
----
-
-## **4. Challenges and Lessons Learned**
-- Handling **duplicate records** while ensuring accurate filtering.
-- Balancing **performance vs. interactivity** in Streamlit.
-- Adjusting visualizations dynamically based on user selections.
-
----
-
-## **5. Conclusion**
-- Summarize the key takeaways from building the dashboard.
-- Encourage readers to explore **data-driven decision-making** through interactive tools.
-- Mention potential improvements (e.g., adding more interactivity, tooltips, animations).
-
-
----
-
 # **From Raw Data to Insightful Visuals: The Journey of Building an Interactive Web Application**  
 
 ## **Introduction: A Blank Canvas and a Challenge**  
@@ -67,8 +13,6 @@ I'll finish this part a bit later, it's just a rough plan
 It all started with a dataset—a plain text file filled with numbers and categorical variables. Faculty salaries, degrees, ranks, and years of service were all there, waiting to tell a story. But the challenge was clear: how could we transform this static dataset into an interactive, **engaging, and intuitive experience**?  
 
 We knew that rows and columns of numbers alone wouldn’t cut it. We needed **visualization**—but not just any charts. They had to be meaningful, dynamic, and easy to explore. The journey began with **choosing the right tech stack**, designing a smooth **user experience**, and selecting the **best charts** to bring the data to life.  
-
----
 
 ## **Why Streamlit? Choosing the Right Tech Stack**  
 
@@ -79,8 +23,6 @@ We wanted something **fast, interactive, and Python-friendly**, so **Streamlit**
 For **data manipulation**, we relied on **Pandas**, the Swiss army knife for handling datasets. And for visualization? **Matplotlib and Seaborn** were our go-to libraries. They provided **beautiful, customizable** plots while seamlessly integrating with Pandas.  
 
 With our tools in place, it was time to think about **how users would interact with the data**.  
-
----
 
 ## **Designing a User Experience That Feels Effortless**  
 
@@ -95,8 +37,6 @@ We also needed to answer a key question: *What should users see first?*
 - **Textual insights** accompanied each visualization, ensuring users could interpret the charts correctly.  
 
 With the user flow in place, it was time for the most exciting part: **bringing the data to life with charts**.  
-
----
 
 ## **The Art of Choosing the Right Charts**  
 
@@ -126,8 +66,6 @@ Did gender influence which academic fields faculty members specialized in? **Sta
 
 Again, **percentages over raw counts** made the data more digestible, and a **summary table** provided an exact breakdown.  
 
----
-
 ## **Challenges We Faced Along the Way**  
 
 Of course, no project is without its challenges. Here are a few things we had to overcome:  
@@ -140,8 +78,6 @@ Of course, no project is without its challenges. Here are a few things we had to
 
 3. **Ensuring Clarity in Data Representation**  
    - Some initial charts felt **misleading** (e.g., raw counts instead of percentages). Switching to **relative distributions** made comparisons much easier.  
-
----
 
 ## **Final Thoughts: The Power of Interactive Data Visualization**  
 
