@@ -32,25 +32,13 @@ Our initial descriptive analysis revealed several interesting points:
 - **Faculty Distribution:** Out of 1,597 faculty members, approximately 25% (409) are women and 75% (1,188) are men. This imbalance sets the stage for exploring potential disparities.
 - **Educational and Hiring Trends:** Looking at the boxplot, women earned their highest degrees later than men. Similarly, women were hired at the university a few years after their male colleagues. This suggests a potential generational or systemic difference in career trajectories.
 - **Salary Differences:** One of the most striking findings is the salary gap. The median monthly salary in 1995 was about \$5,400 for women compared to \$6,700 for men. Not only does the gap exist in the medians, but the range also shows that the highest salaries tend to be concentrated among men.
-
-![Distribution by Sex](figures\degyr_salary_startyr-Distribution_by_Sex.png)
-*Figure 1: Boxplot illustrating the distribution of year of most recent degree, monthly salaries and hiring year for male and female faculty members. The plot highlights the median, quartiles, and outliers, offering a clear visual representation of the metric disparities between genders.*
-
-
 - **Rank and Representation:** When we examine academic ranks, we see that women hold less than half of the positions in each rank category. For example, among faculty with a PhD—a group of 1,350—the number of women is roughly one-quarter (about 334), highlighting a gender imbalance in the most senior ranks.
-
-![Distribution by rank](figures\sex-Distribution_by_Rank.png)
-*Figure 2: Bar chart illustrating the distribution of faculty members by rank and sex. This visualization highlights the proportion of male and female faculty members across different academic ranks, providing a clear view of gender representation at various career stages.*
 
 ## Outliers and Interesting Trends
 
 While the numbers give us overall trends, our EDA has also helped us spot a few outliers and curious patterns:
 - **Salary Extremes:** There are a few instances where salaries are exceptionally high compared to the norm. These outliers might be linked to specific administrative roles or other factors not captured by the basic variables.
 - **Time Trends in Salary Growth:** Because our data spans nearly two decades, you can observe how salaries have generally trended upward over time. However, the rate of increase isn’t uniform. In some instances, the salary growth appears more gradual, while in others there are steeper jumps. Such variations can spark questions about promotions or changes in university policies over time.
-
-![Salary Trend Over Time](figures\salary_trend_over_time-by_sex.png)
-*Figure 3: Line graph illustrating the trend of median salary growth over time for male and female faculty members. This visualization helps us understand how the salary gap between genders has evolved over the years, highlighting periods of significant changes and trends.*
-
 - **Career Progression:** Beyond the salary, the data also hints at interesting differences in career trajectories. For example, the delay in attaining higher degrees or being hired could influence the pace of promotions. These trends set the stage for our later, more formal statistical analyses.
 
 ## Visualizing the Distributions
@@ -66,6 +54,5 @@ This first blog post serves as an introduction to our dataset and the initial ED
 
 
 Stay tuned for our next installment where we dive into the statistical methods and inference behind these findings, and begin to address the core questions of sex bias and promotion patterns.
----
 
 We hope this overview gives you a clear, accessible entry point into this dataset. It’s exciting to see how raw data can reveal compelling narratives about career trajectories, equity, and institutional practices. Join us next time as we unravel more of these insights with formal statistical tests and in-depth analysis!
