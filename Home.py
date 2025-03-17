@@ -29,7 +29,7 @@ team_members = [
     {"name": "Ayush Mall", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/ayush-mall/"},
     {"name": "Riddhesh Sawant", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/ridswnt10/"},
     {"name": "Smeet Dedhia", "photo": "./assets/profilepics/Smeet.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
-    {"name": "Zhansaya Ussembayeva", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/zhansaya-ussembayeva/"},
+    {"name": "Zhansaya Ussembayeva", "photo": "./assets/profilepics/Saya.JPG", "linkedin": "https://www.linkedin.com/in/zhansaya-ussembayeva/"},
 ]
 
 cols = st.columns(3)
