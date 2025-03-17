@@ -5,7 +5,7 @@ from data_loader import load_data
 df = load_data()
 
 st.title("Promotion Bias Analysis")
-st.header("Exploring Bias in Granting Salary Increases")
+
 
 # Create text input fields for year selection (on the same line)
 col1, col2 = st.columns(2)
@@ -14,7 +14,7 @@ with col1:
     y1 = st.sidebar.text_input("Enter Start Year (≥ 80):", value="80")
 with col2:
     y2 = st.sidebar.text_input("Enter End Year (≤ 95):", value="95")
-
+st.header(f"Exploring Bias in Granting Salary Increases from : 19{y1}-{y2}")
 # Validate inputs
 try:
     y1, y2 = int(y1), int(y2)
@@ -47,7 +47,7 @@ reject_null = p_value < 0.05
 decision_text = "Reject Null Hypothesis" if reject_null else "No Reason to Reject \nNull Hypothesis"
 decision_color = "red" if reject_null else "green"
 
-st.subheader("Promotion Proportions by Gender")
+# st.subheader("Promotion Proportions by Gender")
 
 fig, ax = plt.subplots(figsize=(6, 4))
 
@@ -65,9 +65,11 @@ ax.set_ylabel("Proportion Promoted")
 ax.set_title("Proportion of Promotions by Gender")
 ax.legend()
 
+
+p_val_string = f"Z-value: {z_stat:.2f}\nP-value: {p_value:.4f}" if p_value>0.001 else f"Z-value: {z_stat:.2f}\nP-value < 0.001"
 plt.text(
     0.60, 0.85,
-    f"Z-value: {z_stat:.2f}\nP-value: {p_value:.4f}",
+    p_val_string,
     transform=plt.gca().transAxes,
     fontsize=9, fontweight="bold", color="black",
     verticalalignment='top', horizontalalignment='left'
