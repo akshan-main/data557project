@@ -21,7 +21,8 @@ def load_blog_metadata():
                 title = lines[0].strip("# ").strip()  # Extract title from first line
                 description = extract_description(lines)  # Extract short description
                 blogs.append({"title": title, "description": description, "file": filename})
-    return blogs
+    sorted_blogs = sorted(blogs, key=lambda k: k["title"])
+    return sorted_blogs
 
 def display_blog_list():
     """Displays blogs in a 3-column grid layout."""
