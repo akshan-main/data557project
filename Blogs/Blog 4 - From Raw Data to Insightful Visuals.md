@@ -92,4 +92,6 @@ Looking ahead, we could further enhance the dashboard by:
 - Allowing users to **download filtered data**.  
 - Exploring **trend analysis over multiple years**.  
 
-But for now, we step back and admire the journey—from **plain text to interactive storytelling**.  
+But for now, we step back and admire the journey—from **raw data to interactive storytelling**.  
+
+In our next and final blog post, we will dive into the world of predictive analytics. We'll explore how to use **Multiple Linear Regression (MLR)** to predict academic salaries based on various factors. Stay tuned for an exciting conclusion to our series!

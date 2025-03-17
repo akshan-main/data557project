@@ -94,3 +94,7 @@ This aggregated starting-salary distribution confirms the pattern we see annuall
 3. **Policy Implications**: If the organization or industry behind this data aims to ensure fairness, it must do more than short‐term fixes. The fact that the gap remains for nearly two decades underscores the need for **systemic** changes—be it in hiring offers, wage increments, or thorough salary audits.
 
 **Key Takeaway**: The **t‐test** consistently rejects the null across every year’s salary data from 1976 to 1995. No single year offers evidence that these two groups have the same pay distribution, pointing to a deeply **embedded** pay gap. 
+
+In our next blog, we will delve into **Exploring Gender Bias in University Promotions**. We will analyze promotion rates, time to promotion, and other relevant metrics to uncover any disparities and discuss potential underlying causes and solutions.
+
+Stay tuned for more insights!

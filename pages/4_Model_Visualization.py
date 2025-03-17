@@ -155,10 +155,10 @@ st.dataframe(coef_df)
 # R² value
 st.markdown("### Model Performance (R² Score)")
 
-progress_bar = st.progress(0)
+# progress_bar = st.progress(0)
 
-for i in range(int(r2 * 100) + 1):
-    time.sleep(0.01)
-    progress_bar.progress(i / 100.0)
+# for i in range(int(r2 * 100) + 1):
+#     time.sleep(0.01)
+#     progress_bar.progress(i / 100.0)
 
 st.write(f"**R² Score:** {r2:.3f}")
