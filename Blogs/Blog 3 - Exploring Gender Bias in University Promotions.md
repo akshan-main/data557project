@@ -94,3 +94,5 @@ Our findings provide a nuanced perspective on gender bias in university promotio
 While **promotion timelines seem equitable**, the **disparity in salary increases raises important concerns**. Over time, this can **contribute to long-term pay gaps**, affecting financial stability and career progression.  
 
 This analysis highlights the need for **greater transparency in salary policies within academia**, ensuring that faculty members are compensated fairly, regardless of gender.
+
+Stay tuned for our next blog post, where we will delve into the process of transforming raw data into insightful visuals. We will explore various data visualization techniques and tools that can help uncover hidden patterns and trends, making complex data more accessible and understandable. Don't miss it!
