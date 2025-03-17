@@ -59,7 +59,7 @@ with st.sidebar.form("salary_prediction_form"):
     degree = st.selectbox("Highest Degree", df["deg"].unique().tolist(), key="degree")
     year_of_degree = st.number_input("Year of Degree", min_value=int(df["yrdeg_full"].min()), max_value=int(df["yrdeg_full"].max()), value=int(df["yrdeg_full"].max()), format="%d", key="year_of_degree")
 
-    start_year = st.slider("Start Year", min_value=year_of_degree, max_value=2025, value=year_of_degree, key="start_year")
+    start_year = st.slider("Start Year", min_value=year_of_degree, max_value=2020, value=year_of_degree, key="start_year")
 
     field = st.selectbox("Field of Study", df["field"].unique().tolist(), key="field")
     rank = st.selectbox("Current Academic Rank", df["rank"].unique().tolist(), key="rank")
