@@ -33,9 +33,9 @@ Armed with these features, I set out to build a model that could **forecast sala
 To turn raw salary data into meaningful predictions, I chose **Lasso Regression**—a machine learning algorithm that **balances accuracy and interpretability**.  
 
 ### **Why Lasso Regression?**  
-- 📉 **Feature Selection** – Lasso helps eliminate irrelevant variables, ensuring only the most important salary predictors remain.  
-- ⚡ **Efficiency** – It performs well even with **limited data** and avoids overfitting.  
-- 🔍 **Interpretability** – Unlike black-box models, Lasso allows us to **see which factors matter most** in salary prediction.  
+- **Feature Selection** – Lasso helps eliminate irrelevant variables, ensuring only the most important salary predictors remain.  
+- **Efficiency** – It performs well even with **limited data** and avoids overfitting.  
+- **Interpretability** – Unlike black-box models, Lasso allows us to **see which factors matter most** in salary prediction.  
 
 The model was trained using historical salary records, **learning how faculty salaries change over time** based on career progression patterns.  
 
@@ -45,7 +45,7 @@ But what truly made this project exciting was not just forecasting paychecks—i
 
 ## **What Drives Academic Salaries? Key Insights**  
 
-### **1️⃣ Gender-Based Salary Comparison** 💰♂️♀️  
+### **Gender-Based Salary Comparison** 
 
 Does gender affect academic salaries? The model predicts **separate salaries for male and female faculty members**, highlighting **potential pay disparities**.  
 
@@ -53,7 +53,7 @@ While factors like rank and experience still play a major role, **the results hi
 
 ---
 
-### **2️⃣ The Power of Promotions 🚀**  
+### **The Power of Promotions**  
 
 How long does it take to move up the academic ladder?  
 
@@ -64,7 +64,7 @@ This means **staying in the same rank for too long might hurt salary potential**
 
 ---
 
-### **3️⃣ Administrative Roles: A Hidden Pay Boost?** 📊  
+### **Administrative Roles: A Hidden Pay Boost?**
 
 Professors who take on **administrative duties (e.g., department chairs)** tend to earn significantly more.  
 
@@ -78,9 +78,9 @@ So, if you’re an academic wondering whether to take on leadership responsibili
 
 One of the most valuable aspects of this project is not just the **predictions**, but the **insights the model reveals through data visualization**.  
 
-📊 **Feature Importance Visualization** – Inspired by SHAP, this chart shows **which variables influence salary the most**.  
-📊 **Career Progression Simulation** – Users can enter their **own academic qualifications** to see how their salary might evolve over time.  
-📊 **Model Performance Metrics** – The R² score provides a **clear measure of prediction accuracy**.  
+**Feature Importance Visualization** – Inspired by SHAP, this chart shows **which variables influence salary the most**.  
+**Career Progression Simulation** – Users can enter their **own academic qualifications** to see how their salary might evolve over time.  
+**Model Performance Metrics** – The R² score provides a **clear measure of prediction accuracy**.  
 
 These visualizations help transform raw numbers into a **story of career growth and salary potential**.  
 
@@ -90,9 +90,9 @@ These visualizations help transform raw numbers into a **story of career growth 
 
 This project isn’t just about forecasting salaries—it’s about **empowering faculty members** to better understand their earning potential.  
 
-🔹 **Aspiring professors** can use it to set salary expectations early in their careers.  
-🔹 **Mid-career academics** can explore the impact of promotions and administrative roles.  
-🔹 **Institutions** can use insights to **address salary disparities and improve policies**.  
+**Aspiring professors** can use it to set salary expectations early in their careers.  
+**Mid-career academics** can explore the impact of promotions and administrative roles.  
+**Institutions** can use insights to **address salary disparities and improve policies**.  
 
 At its core, **data science meets career strategy** in this project.  
 
@@ -103,9 +103,9 @@ At its core, **data science meets career strategy** in this project.
 While the model provides valuable salary predictions, there’s always room for improvement.  
 
 🔍 **Future Enhancements**:  
-✅ Expanding the dataset to include more institutions.  
-✅ Adding trend analysis across multiple years.  
-✅ Incorporating **inflation-adjusted salaries** for better accuracy.  
-✅ Exploring **AI-driven career recommendations** based on salary potential.  
+1. Expanding the dataset to include more institutions.  
+2. Adding trend analysis across multiple years.  
+3. Incorporating **inflation-adjusted salaries** for better accuracy.  
+4. Exploring **AI-driven career recommendations** based on salary potential.  
 
 For now, this project stands as a **practical, data-driven tool** for academics looking to navigate their career trajectories.  
