@@ -37,7 +37,6 @@ def display_blog_content():
         
         for line in lines:
             if line.startswith("!["):
-                print(line.split("(")[-1][:-5])
                 st.image('.' + line.split("(")[-1].strip(")")[:-2])
             else:
                 st.markdown(line, unsafe_allow_html=True)
