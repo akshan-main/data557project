@@ -1,5 +1,9 @@
 # Blog 4] Predicting Academic Salaries: Can Data Science Forecast Your Paycheck?
 
+Welcome to the forth installment of our blog series on investigating faculty salary data at a US university. In this post, we would like to discuss about Predicting Academic Salaries using Machine Learning models and analyzing our findings.
+
+---
+
 Imagine you're a young assistant professor. You’ve spent years earning degrees, building expertise, and finally securing a faculty position. But one question lingers in your mind: How will your salary evolve over time? 
 
 Will experience alone guarantee a bigger paycheck? Or do promotions, administrative roles, and even your field of study play a bigger role?  
@@ -7,8 +11,6 @@ Will experience alone guarantee a bigger paycheck? Or do promotions, administrat
 To answer these questions, I built a **machine learning model** that predicts faculty salaries. What started as a curiosity-driven project soon turned into a deep dive into **career progression, academic hierarchies, and salary disparities**.  
 
 Here’s what I discovered.  
-
----
 
 ## **The Data: More Than Just a Paycheck**  
 
