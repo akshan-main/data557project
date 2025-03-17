@@ -1,8 +1,10 @@
 # 1. Uncovering the Story in the Data: An Overview and EDA
 
-Welcome to the first installment of our blog series on investigating faculty salary data at a US university. In this post, we’re taking a close look at the raw data and sharing our initial findings through a detailed exploratory data analysis (EDA). Our goal is to tell the story behind the numbers—what do the features tell us about the faculty and their careers? And what interesting trends or outliers can we uncover?
+Welcome to the first installment of our blog series on investigating faculty salary data at a US university. In this post, we’re taking a close look at the raw data and sharing our initial findings through a detailed exploratory data analysis (EDA). 
 
 ---
+
+Our goal for this blofg series is to tell the story behind the numbers—what do the features tell us about the faculty and their careers? And what interesting trends or outliers can we uncover?
 
 ## Getting to Know the Data
 

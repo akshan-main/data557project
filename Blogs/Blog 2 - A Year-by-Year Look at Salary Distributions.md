@@ -1,6 +1,6 @@
 # 2. A Year-by-Year Look at Salary Distributions
 
-This blog explores a 19‐year dataset of salary distributions from 1976 to 1995, focusing on whether the average salaries of two groups (often men vs. women) differ significantly each year.
+Welcome to the second  installment of our blog series on investigating faculty salary data at a US university. This blog explores a 19‐year dataset of salary distributions from 1976 to 1995, focusing on whether the average salaries of two groups (often men vs. women) differ significantly each year.
 
 ---
 
