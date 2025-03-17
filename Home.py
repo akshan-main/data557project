@@ -24,12 +24,12 @@ This project aims to analyze faculty salary data to determine whether there are 
 
 st.header("The Team:")
 team_members = [
-    {"name": "Aaditya Chopra", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
-    {"name": "Akshan Krithick", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
-    {"name": "Ayush Mall", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
-    {"name": "Riddhesh Sawant", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
+    {"name": "Aaditya Chopra", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/aaditya0106/"},
+    {"name": "Akshan Krithick", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/akshan-krithick-8a3966269/"},
+    {"name": "Ayush Mall", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/ayush-mall/"},
+    {"name": "Riddhesh Sawant", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/ridswnt10/"},
     {"name": "Smeet Dedhia", "photo": "./assets/profilepics/Smeet.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
-    {"name": "Zhansaya Ussembayeva", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/smeet-dedhia-9b430621b/"},
+    {"name": "Zhansaya Ussembayeva", "photo": "./assets/profilepics/Profile.png", "linkedin": "https://www.linkedin.com/in/zhansaya-ussembayeva/"},
 ]
 
 cols = st.columns(3)
