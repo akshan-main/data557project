@@ -88,7 +88,17 @@ These visualizations help transform raw numbers into a **story of career growth 
 
 ---
 
+
 [Here's the link to the prediction model](https://data557project-salarybias.streamlit.app/Model_Visualization)
+
+---
+
+## **Model Coeffecients**
+
+![Coeffecient Barchart](../assets/blog4/coeffecient_table.png)
+![Coeffecient table](../assets/blog4/coeffecients_chart.png)
+
+Note: The coefficient for num_experience (15.1665) is not statistically significant at the 0.05 level, as its p-value is 0.1221, which is greater than 0.05. This suggests that num_experience does not have a significant impact on the dependent variable in this regression model.
 
 ---
 
