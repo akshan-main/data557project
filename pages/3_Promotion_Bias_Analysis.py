@@ -14,7 +14,8 @@ with st.expander("🔍 Help Me Interpret"):
     Find  more information about these tests in our blog!
     ### Chart 1
     The first chart plots Kernel Densities, i.e. a histogram of sorts which shows the frequency of each salary increase per year.
-
+    Use the controls in the sidebar to customize the year range considered for this analysis. 
+    
     ### Chart 2
     The second chart plots Kernel Densities of Promotion Time in years. 
 
