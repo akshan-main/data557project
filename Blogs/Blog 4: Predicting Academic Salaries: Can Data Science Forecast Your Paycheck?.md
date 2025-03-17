@@ -1,4 +1,4 @@
-# **Predicting Academic Salaries: Can Data Science Forecast Your Paycheck?**  
+# Blog 4] Predicting Academic Salaries: Can Data Science Forecast Your Paycheck?
 
 Imagine you're a young assistant professor. You’ve spent years earning degrees, building expertise, and finally securing a faculty position. But one question lingers in your mind: How will your salary evolve over time? 
 

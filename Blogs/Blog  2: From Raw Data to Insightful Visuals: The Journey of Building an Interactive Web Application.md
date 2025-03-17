@@ -1,4 +1,4 @@
-# From Raw Data to Insightful Visuals: The Journey of Building an Interactive Web Application
+# Blog 2] From Raw Data to Insightful Visuals: The Journey of Building an Interactive Web Application
 
 Welcome to the second installment of our blog series on investigating faculty salary data at a US university. In this post, we would like to shed light on how to transform the rough data into meaningful insights. 
 

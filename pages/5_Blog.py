@@ -26,10 +26,10 @@ def load_blog_metadata():
 def display_blog_list():
     """Displays blogs in a 3-column grid layout."""
     blogs = load_blog_metadata()
-    cols = st.columns(3)  # Create 3 columns
+    cols = st.columns(2)  # Create 2 columns
 
     for i, blog in enumerate(blogs):
-        with cols[i % 3]:  # Distribute across 3 columns
+        with cols[i % 2]:  # Distribute across 2 columns
             st.subheader(blog["title"])
             st.write(blog["description"])
             if st.button(f"Read More", key=blog["file"]):
