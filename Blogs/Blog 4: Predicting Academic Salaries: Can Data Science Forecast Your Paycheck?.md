@@ -86,6 +86,10 @@ These visualizations help transform raw numbers into a **story of career growth 
 
 ---
 
+[Here's the link to the prediction model](https://data557project-salarybias.streamlit.app/Model_Visualization)
+
+---
+
 ## **Why This Matters**  
 
 This project isn’t just about forecasting salaries—it’s about **empowering faculty members** to better understand their earning potential.  
