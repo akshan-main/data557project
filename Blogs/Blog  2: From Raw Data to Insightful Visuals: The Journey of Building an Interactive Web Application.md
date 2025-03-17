@@ -2,11 +2,11 @@
 
 Welcome to the second installment of our blog series on investigating faculty salary data at a US university. In this post, we would like to shed light on how to transform the rough data into meaningful insights. 
 
+---
+
 It all started with a dataset — a plain text file filled with numbers and categorical variables. Faculty salaries, degrees, ranks, and years of service were all there, waiting to tell a story. But the challenge was clear: how could we transform this static dataset into an interactive, engaging and intuitive experience?  
 
 We knew that rows and columns of numbers alone wouldn’t cut it. We needed **visualization** - but not just any charts. They had to be meaningful, dynamic and easy to explore. The journey began with choosing the right tech stack, designing a smooth user experience and selecting the best charts to bring the data to life.  
-
----
 
 ## **Why Streamlit?**  
 
