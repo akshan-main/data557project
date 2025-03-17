@@ -8,15 +8,15 @@ st.title("Promotion Bias Analysis")
 with st.expander("🔍 Help Me Interpret"):
     st.subheader("What do these charts show?")
     st.markdown("""
-    The following plots show Kernel Desnities for Males and Females separately, along with their gender mean, so that a quick visual comparison can be made.
+    The following plots show Kernel Densities for Males and Females separately, along with their gender mean, so that a quick visual comparison can be made.
     Just like any other statistical methods, the difference in the means of males and females, expressed as a multiple of the distribution's standard error, which helps us quantify the gap.
     The appropriate statistical test statistic and p-value are also present in the graph legend along with its interpretation considered at the 0.05 significance level.
     Find  more information about these tests in our blog!
     ### Chart 1
-    The first chart plots Kernel Denisties, i.e. a histogram of sorts which shows the frequency of each salary increase per year.
+    The first chart plots Kernel Densities, i.e. a histogram of sorts which shows the frequency of each salary increase per year.
 
     ### Chart 2
-    The second chart plots Kernel Desnities of Promotion Time in years. 
+    The second chart plots Kernel Densities of Promotion Time in years. 
 
     ### Chart 3 
     The third chart plots the proportion of males and females who were promoted, and compared to the pooled propotion to check for biases.
