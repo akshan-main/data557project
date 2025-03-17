@@ -47,6 +47,10 @@ Our initial descriptive analysis revealed several interesting points:
 While the numbers give us overall trends, our EDA has also helped us spot a few outliers and curious patterns:
 - **Salary Extremes:** There are a few instances where salaries are exceptionally high compared to the norm. These outliers might be linked to specific administrative roles or other factors not captured by the basic variables.
 - **Time Trends in Salary Growth:** Because our data spans nearly two decades, you can observe how salaries have generally trended upward over time. However, the rate of increase isn’t uniform. In some instances, the salary growth appears more gradual, while in others there are steeper jumps. Such variations can spark questions about promotions or changes in university policies over time.
+
+![Salary Trend Over Time](figures\salary_trend_over_time-by_sex.png)
+*Figure 3: Line graph illustrating the trend of median salary growth over time for male and female faculty members. This visualization helps us understand how the salary gap between genders has evolved over the years, highlighting periods of significant changes and trends.*
+
 - **Career Progression:** Beyond the salary, the data also hints at interesting differences in career trajectories. For example, the delay in attaining higher degrees or being hired could influence the pace of promotions. These trends set the stage for our later, more formal statistical analyses.
 
 ## Visualizing the Distributions
