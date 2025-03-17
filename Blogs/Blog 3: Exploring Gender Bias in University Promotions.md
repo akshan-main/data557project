@@ -1,6 +1,6 @@
 # 3. Exploring Gender Bias in University Promotions
 
-Analyzing gender bias in university promotions using historical data (1980-1995). While promotion timelines appear similar for men and women, salary increases show a significant disparity. Data-driven insights highlight the need for fairer salary policies in academia.
+In this third installment of the blog series we will be analyzing gender bias in university promotions using historical data (1980-1995). While promotion timelines appear similar for men and women, salary increases show a significant disparity. Data-driven insights highlight the need for fairer salary policies in academia.
 
 ---
 

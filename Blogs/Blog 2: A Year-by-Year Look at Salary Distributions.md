@@ -1,6 +1,6 @@
 # 2. A Year-by-Year Look at Salary Distributions
 
-This blog explores a **19‐year dataset** of salary distributions from **1976** to **1995**, focusing on whether the **average salaries** of two groups (often men vs. women) differ significantly each year. We apply a **two-sample t‐test** annually to see if there’s evidence of a salary gap. According to the plots (one for each year) and their associated statistics, the t‐test **always rejects the null hypothesis** of “no difference in means”—implying a consistent, statistically significant pay disparity across the entire period.
+This blog explores a 19‐year dataset of salary distributions from 1976 to 1995, focusing on whether the average salaries of two groups (often men vs. women) differ significantly each year.
 
 ---
 

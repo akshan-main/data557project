@@ -1,6 +1,6 @@
 # 5. Predicting Academic Salaries: Can Data Science Forecast Your Paycheck?
 
-Welcome to the forth installment of our blog series on investigating faculty salary data at a US university. In this post, we would like to discuss about Predicting Academic Salaries using Machine Learning models and analyzing our findings.
+Welcome to the final installment of our blog series on investigating faculty salary data at a US university. In this post, we would like to discuss about Predicting Academic Salaries using Machine Learning models and analyzing our findings.
 
 ---
 
