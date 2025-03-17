@@ -95,8 +95,9 @@ These visualizations help transform raw numbers into a **story of career growth 
 
 ## **Model Coeffecients**
 
-<img src="https://i.postimg.cc/4fkqLnMr/coeffecients-chart.png" alt="Coefficient Barchart" style="width:50%;">
-<img src="https://i.postimg.cc/0QPt8K1j/coeffecient-table.png" alt="Coefficient Table" style="width:50%;">
+<img src="https://i.postimg.cc/4fkqLnMr/coeffecients-chart.png" width="500">
+<img src="https://i.postimg.cc/0QPt8K1j/coeffecient-table.png" width="500">
+
 
 Note: The coefficient for num_experience (15.1665) is not statistically significant at the 0.05 level, as its p-value is 0.1221, which is greater than 0.05. This suggests that num_experience does not have a significant impact on the dependent variable in this regression model.
 
