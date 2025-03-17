@@ -7,6 +7,16 @@ from data_loader import load_data
 st.title("Salary Bias Analysis")
 df = load_data()
 
+with st.expander("🔍 Help me Interpret"):
+    st.subheader("What do these charts show?")
+    st.markdown("""
+    The below charts plot Kernel Denisties, i.e. a histogram of sorts which shows the frequency of each salary.
+    Separate plots for Males and Females are hightighed, along with their gender mean, so that a quick visual comparison can be made.
+    Just like any other statistical methods, the difference in the means of males and females, expressed as a multiplr of the distribution standard error helps us quantify the gap.
+    The appropriate statistical test statistic and p-value are also present in the graph legend along with its interpretation considered at the 0.05 significance level.
+    Find  more information about these tests in our blog!
+    """)
+
 year = st.sidebar.number_input("Enter Year", min_value=76, max_value=95, value=95)
 st.header(f"Exploring Bais in Salary for the Year : 19{year}")
 t_stat, p_value, se1 = tTestYear(df, year=year)
