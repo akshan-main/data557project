@@ -15,6 +15,8 @@ with st.expander("🔍 Help me Interpret"):
     Just like any other statistical methods, the difference in the means of males and females is expressed as a multiple of the distribution's standard error, which helps us quantify the gap.
     The appropriate statistical test statistic and p-value are also present in the graph legend along with its interpretation considered at the 0.05 significance level.
     Find  more information about these tests in our blog!
+    <br>
+    Use the controls in the sidebar to focus on a specific year for salary analysis, or scroll down to view the analysis for starting salaries.
     """)
 
 year = st.sidebar.number_input("Enter Year", min_value=76, max_value=95, value=95)
