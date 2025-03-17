@@ -8,15 +8,15 @@ Imagine you're a young assistant professor. You’ve spent years earning degrees
 
 Will experience alone guarantee a bigger paycheck? Or do promotions, administrative roles, and even your field of study play a bigger role?  
 
-To answer these questions, I built a **machine learning model** that predicts faculty salaries. What started as a curiosity-driven project soon turned into a deep dive into **career progression, academic hierarchies, and salary disparities**.  
+To answer these questions, we built a **machine learning model** that predicts faculty salaries. What started as a curiosity-driven project soon turned into a deep dive into **career progression, academic hierarchies, and salary disparities**.  
 
-Here’s what I discovered.  
+Here’s what we discovered.  
 
 ## **The Data: More Than Just a Paycheck**  
 
 Salary data isn’t just numbers—it’s a reflection of **career trajectories, institutional policies, and systemic patterns** in academia.  
 
-For this project, I used historical faculty salary data, extracting key features that could influence earnings, including:  
+For this project, we used historical faculty salary data, extracting key features that could influence earnings, including:  
 
 **Field of Study** – Salaries vary significantly across disciplines.  
 **Academic Rank** – Assistant, Associate, and Full Professors follow different salary paths.  
@@ -26,13 +26,13 @@ For this project, I used historical faculty salary data, extracting key features
 **Highest Degree Earned** – Do some degrees command higher pay?  
 **Year for Salary Prediction** – Users enter a future year to see how their salary might evolve.  
 
-Armed with these features, I set out to build a model that could **forecast salaries and uncover hidden trends** in academic pay.  
+Armed with these features, we set out to build a model that could **forecast salaries and uncover hidden trends** in academic pay.  
 
 ---
 
 ## **Building the Prediction Model**  
 
-To turn raw salary data into meaningful predictions, I chose **Lasso Regression**—a machine learning algorithm that **balances accuracy and interpretability**.  
+To turn raw salary data into meaningful predictions, we chose **Lasso Regression**—a machine learning algorithm that **balances accuracy and interpretability**.  
 
 ### **Why Lasso Regression?**  
 - **Feature Selection** – Lasso helps eliminate irrelevant variables, ensuring only the most important salary predictors remain.  
