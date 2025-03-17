@@ -5,7 +5,24 @@ from data_loader import load_data
 df = load_data()
 
 st.title("Promotion Bias Analysis")
-st.header("Exploring Bias in Granting Salary Increases")
+with st.expander("🔍 Help Me Interpret"):
+    st.subheader("What do these charts show?")
+    st.markdown("""
+    The following plots show Kernel Densities for Males and Females separately, along with their gender mean, so that a quick visual comparison can be made.
+    Just like any other statistical methods, the difference in the means of males and females, expressed as a multiple of the distribution's standard error, which helps us quantify the gap.
+    The appropriate statistical test statistic and p-value are also present in the graph legend along with its interpretation considered at the 0.05 significance level.
+    Find  more information about these tests in our blog!
+    ### Chart 1
+    The first chart plots Kernel Densities, i.e. a histogram of sorts which shows the frequency of each salary increase per year.
+    Use the controls in the sidebar to customize the year range considered for this analysis. 
+    
+    ### Chart 2
+    The second chart plots Kernel Densities of Promotion Time in years. 
+
+    ### Chart 3 
+    The third chart plots the proportion of males and females who were promoted, and compared to the pooled propotion to check for biases.
+    
+    """)
 
 # Create text input fields for year selection (on the same line)
 col1, col2 = st.columns(2)
@@ -14,7 +31,7 @@ with col1:
     y1 = st.sidebar.text_input("Enter Start Year (≥ 80):", value="80")
 with col2:
     y2 = st.sidebar.text_input("Enter End Year (≤ 95):", value="95")
-
+st.header(f"Exploring Bias in Granting Salary Increases from : 19{y1}-{y2}")
 # Validate inputs
 try:
     y1, y2 = int(y1), int(y2)
@@ -47,7 +64,7 @@ reject_null = p_value < 0.05
 decision_text = "Reject Null Hypothesis" if reject_null else "No Reason to Reject \nNull Hypothesis"
 decision_color = "red" if reject_null else "green"
 
-st.subheader("Promotion Proportions by Gender")
+# st.subheader("Promotion Proportions by Gender")
 
 fig, ax = plt.subplots(figsize=(6, 4))
 
@@ -65,9 +82,11 @@ ax.set_ylabel("Proportion Promoted")
 ax.set_title("Proportion of Promotions by Gender")
 ax.legend()
 
+
+p_val_string = f"Z-value: {z_stat:.2f}\nP-value: {p_value:.4f}" if p_value>0.001 else f"Z-value: {z_stat:.2f}\nP-value < 0.001"
 plt.text(
     0.60, 0.85,
-    f"Z-value: {z_stat:.2f}\nP-value: {p_value:.4f}",
+    p_val_string,
     transform=plt.gca().transAxes,
     fontsize=9, fontweight="bold", color="black",
     verticalalignment='top', horizontalalignment='left'

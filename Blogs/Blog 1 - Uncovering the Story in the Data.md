@@ -1,6 +1,8 @@
-# Uncovering the Story in the Data: An Overview and EDA
+# 1. Uncovering the Story in the Data: An Overview and EDA
 
 Welcome to the first installment of our blog series on investigating faculty salary data at a US university. In this post, we’re taking a close look at the raw data and sharing our initial findings through a detailed exploratory data analysis (EDA). Our goal is to tell the story behind the numbers—what do the features tell us about the faculty and their careers? And what interesting trends or outliers can we uncover?
+
+---
 
 ## Getting to Know the Data
 
@@ -62,6 +64,8 @@ Understanding a dataset isn’t just about numbers—it’s also about seeing pa
 
 This first blog post serves as an introduction to our dataset and the initial EDA phase. By breaking down the features, identifying key trends, and spotting outliers, we’ve set a strong foundation for our deeper statistical analysis in future posts. Our next steps will involve rigorously testing hypotheses—like whether salary differences between men and women are statistically significant—and assessing the impact of potential confounding factors.
 
+
 Stay tuned for our next installment where we dive into the statistical methods and inference behind these findings, and begin to address the core questions of sex bias and promotion patterns.
+---
 
 We hope this overview gives you a clear, accessible entry point into this dataset. It’s exciting to see how raw data can reveal compelling narratives about career trajectories, equity, and institutional practices. Join us next time as we unravel more of these insights with formal statistical tests and in-depth analysis!
