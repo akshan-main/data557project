@@ -4,7 +4,7 @@ Welcome to the first installment of our blog series on investigating faculty sal
 
 ---
 
-Our goal for this blofg series is to tell the story behind the numbers—what do the features tell us about the faculty and their careers? And what interesting trends or outliers can we uncover?
+Our goal for this blog series is to tell the story behind the numbers—what do the features tell us about the faculty and their careers? And what interesting trends or outliers can we uncover?
 
 ## Getting to Know the Data
 
@@ -34,13 +34,21 @@ Our initial descriptive analysis revealed several interesting points:
 - **Faculty Distribution:** Out of 1,597 faculty members, approximately 25% (409) are women and 75% (1,188) are men. This imbalance sets the stage for exploring potential disparities.
 - **Educational and Hiring Trends:** Looking at the boxplot, women earned their highest degrees later than men. Similarly, women were hired at the university a few years after their male colleagues. This suggests a potential generational or systemic difference in career trajectories.
 - **Salary Differences:** One of the most striking findings is the salary gap. The median monthly salary in 1995 was about \$5,400 for women compared to \$6,700 for men. Not only does the gap exist in the medians, but the range also shows that the highest salaries tend to be concentrated among men.
+![Distribution by Sex](/assets/figures/figure_1.png)
+*Figure 1: Faculty Salary, Education, and Hiring Trends by Sex - This figure presents a comparative analysis of faculty members based on sex, focusing on the year of their latest degree, hiring year, and salary distribution. The first boxplot shows that women, on average, earned their most recent degrees later than men. The hiring year distribution follows a similar pattern, indicating that women were generally hired later than their male counterparts. The salary distribution highlights a notable disparity, with men earning higher median salaries and a greater spread in upper salary ranges. These trends suggest potential systemic differences in hiring, promotion, and salary progression within the faculty.*
+
 - **Rank and Representation:** When we examine academic ranks, we see that women hold less than half of the positions in each rank category. For example, among faculty with a PhD—a group of 1,350—the number of women is roughly one-quarter (about 334), highlighting a gender imbalance in the most senior ranks.
+!['Distribution by Rank'](/assets/figures/figure_2.png)
+*Figure 2: Gender Representation Across Academic Ranks (All Years) - This figure illustrates the gender distribution of faculty members across different academic ranks over all available years. While women make up 36.1% of assistant professors, their representation decreases significantly at higher ranks, with only 22.4% at the associate professor level and just 10.9% at the full professor level. In contrast, men dominate senior positions, accounting for 89.1% of full professors. These trends indicate persistent gender disparities in academic career progression, potentially influenced by historical hiring patterns, promotion criteria, and systemic barriers to advancement in higher education.*
 
 ## Outliers and Interesting Trends
 
 While the numbers give us overall trends, our EDA has also helped us spot a few outliers and curious patterns:
 - **Salary Extremes:** There are a few instances where salaries are exceptionally high compared to the norm. These outliers might be linked to specific administrative roles or other factors not captured by the basic variables.
 - **Time Trends in Salary Growth:** Because our data spans nearly two decades, you can observe how salaries have generally trended upward over time. However, the rate of increase isn’t uniform. In some instances, the salary growth appears more gradual, while in others there are steeper jumps. Such variations can spark questions about promotions or changes in university policies over time.
+!['Salary Trend'](/assets/figures/figure_3.png)
+*Figure 3: Median Salary Growth Over Time by Sex - This line chart illustrates the trajectory of median faculty salaries from 1976 to 1995, disaggregated by sex. While both male and female faculty members have experienced consistent salary growth over the years, a persistent gap remains between the two groups. Men have consistently earned higher median salaries compared to women, with the gap widening at certain points. Notably, some years exhibit steeper salary increases, potentially reflecting changes in university policies, promotion rates, or broader economic trends. This trend raises important questions about the structural factors influencing salary disparities in academia.*
+
 - **Career Progression:** Beyond the salary, the data also hints at interesting differences in career trajectories. For example, the delay in attaining higher degrees or being hired could influence the pace of promotions. These trends set the stage for our later, more formal statistical analyses.
 
 ## Visualizing the Distributions
