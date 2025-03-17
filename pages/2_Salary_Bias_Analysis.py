@@ -12,7 +12,7 @@ with st.expander("🔍 Help me Interpret"):
     st.markdown("""
     The below charts plot Kernel Denisties, i.e. a histogram of sorts which shows the frequency of each salary.
     Separate plots for Males and Females are hightighed, along with their gender mean, so that a quick visual comparison can be made.
-    Just like any other statistical methods, the difference in the means of males and females, expressed as a multiplr of the distribution standard error helps us quantify the gap.
+    Just like any other statistical methods, the difference in the means of males and females, expressed as a multiple of the distribution's standard error, which helps us quantify the gap.
     The appropriate statistical test statistic and p-value are also present in the graph legend along with its interpretation considered at the 0.05 significance level.
     Find  more information about these tests in our blog!
     """)
