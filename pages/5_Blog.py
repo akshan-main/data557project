@@ -33,8 +33,14 @@ def display_blog_content():
     blog_file = st.session_state.get("selected_blog")
     if blog_file:
         with open(os.path.join(BLOG_DIR, blog_file), "r", encoding="utf-8") as file:
-            content = file.read()
-        st.markdown(content)
+            lines = file.readlines()
+        
+        for line in lines:
+            if line.startswith("!["):
+                print(line.split("(")[-1][:-5])
+                st.image('.' + line.split("(")[-1].strip(")")[:-2])
+            else:
+                st.markdown(line, unsafe_allow_html=True)
 
         # Use the on_click callback so we don't attempt to directly set session_state keys here
         st.button("Back to Blogs", on_click=reset_selection)
