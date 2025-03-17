@@ -53,6 +53,6 @@ Understanding a dataset isn’t just about numbers—it’s also about seeing pa
 This first blog post serves as an introduction to our dataset and the initial EDA phase. By breaking down the features, identifying key trends, and spotting outliers, we’ve set a strong foundation for our deeper statistical analysis in future posts. Our next steps will involve rigorously testing hypotheses—like whether salary differences between men and women are statistically significant—and assessing the impact of potential confounding factors.
 
 
-Stay tuned for our next installment where we dive into the statistical methods and inference behind these findings, and begin to address the core questions of sex bias and promotion patterns.
+Stay tuned for our next installments where we dive into the statistical methods and inference behind these findings, and begin to address the core questions of sex bias and promotion patterns.
 
 We hope this overview gives you a clear, accessible entry point into this dataset. It’s exciting to see how raw data can reveal compelling narratives about career trajectories, equity, and institutional practices. Join us next time as we unravel more of these insights with formal statistical tests and in-depth analysis!
